@@ -1,0 +1,56 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+.minesweeper-container {
+    display: grid;
+    grid-template-columns: repeat(10, 40px);
+    grid-template-rows: repeat(10, 40px);
+    gap: 5px;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 445px;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #ddd;
+    border: 1px solid #ccc;
+}
+
+.cell:hover {
+    background-color: #bbb;
+}
+
+.cell.empty {
+    background-color: #eee;
+}
+
+.cell.potential-bomb {
+    background-color: #ff9999;
+}
+
+/* Additional styling for game over message */
+body::before {
+    content: "";
+    display: block;
+    height: 20px;
+}
+
+/* Add some space before the game over message */
+body::before {
+    content: "";
+    display: block;
+    height: 20px;
+}
